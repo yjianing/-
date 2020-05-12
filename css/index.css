@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .board {
+    width: 300px;
+}
+.container .board .panel {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    background: url("../img/bg.gif") no-repeat;
+    cursor: pointer;
+}
+.container .board .panel .result {
+    position: absolute;
+    margin: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity .5s;
+}
+.container .show {
+    width: 500px;
+    height: 500px;
+    display: grid;
+    /* 设置多少列，每列的宽度是多少 */
+    /* grid-template-columns: 100px 100px 100px 100px 100px; */
+    /* 分成5列， 每列占等比例宽度 */
+    grid-template: repeat(20, 1fr)/repeat(5, 1fr);
+    /* 改变排列方向 */
+    grid-auto-flow: column;
+    margin-left: 2em;
+}
+.container .show img {
+    height: 18px;
+    vertical-align: -2px;
+}
+.container .show .number {
+    display: inline-block;
+    width: 30px;
+    text-align: right;
+    margin-right: .5em;
+}
